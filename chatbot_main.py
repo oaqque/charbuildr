@@ -1,7 +1,11 @@
 """
 Author: William Zhiwei Ye
 
-Chatbot based on https://github.com/parulnith/Building-a-Simple-Chatbot-in-Python-using-NLTK/blob/master/chatbot.py
+Chatbot based on 
+https://github.com/parulnith/Building-a-Simple-Chatbot-in-Python-using-NLTK/blob/master/chatbot.py
+
+Harry Potter script from
+https://www.kaggle.com/eward96/harry-potter-and-the-philosophers-stone-script
 """
 import nltk
 import numpy as np 
