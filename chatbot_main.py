@@ -17,6 +17,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 from sentiment import *
+from chatbot import *
 
 # Load Harry Potter corpus
 corpus_df = pd.read_csv('hp_script.csv', encoding = 'ISO-8859-1')
@@ -83,6 +84,7 @@ def response_generative(user_response):
     
 # Main Function for Chatbot
 flag = True
+bot = ChatBot(corpus)
 print("Bot: Hi, I'm the Harry Potter Bot \n")
 
 while (flag == True):
@@ -91,8 +93,9 @@ while (flag == True):
     user_response = user_response.lower()
 
     sim_calc = determine_response(user_response)
-    sentiment, pos, neu, neg = sentiment_analysis(client, [user_response])
-    
+    sentiment = sentiment_analysis(client, [user_response])
+    print("User Relationship: " + str(bot.calculate_user_relationship(sentiment)))
+
     if (sim_calc >= 0.2):
         response_inforet(user_response)
     else:

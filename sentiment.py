@@ -21,6 +21,12 @@ def sentiment_analysis(client, user_response):
     print("Positive: " + str(response.confidence_scores.positive))
     print("Neutral: " + str(response.confidence_scores.neutral))
     print("Negative: " + str(response.confidence_scores.negative))  
-    return response.sentiment, response.confidence_scores.positive, response.confidence_scores.neutral, response.confidence_scores.negative
+    return Sentiment(response.sentiment, response.confidence_scores.positive, response.confidence_scores.neutral, response.confidence_scores.negative)
     
-          
+class Sentiment:
+
+    def __init__(self, sentiment, pos, neu, neg):
+        self.sentiment = sentiment
+        self.pos = pos
+        self.neu = neu
+        self.neg = neg           
