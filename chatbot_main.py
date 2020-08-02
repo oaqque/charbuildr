@@ -94,7 +94,7 @@ while (flag == True):
 
     sim_calc = determine_response(user_response)
     sentiment = sentiment_analysis(client, [user_response])
-    print("User Relationship: " + str(bot.calculate_user_relationship(sentiment)))
+    print("User Relationship: " + str(bot.update_user_relationship(sentiment)))
 
     if (sim_calc >= 0.2):
         response_inforet(user_response)
