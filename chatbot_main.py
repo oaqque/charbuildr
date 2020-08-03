@@ -20,7 +20,7 @@ from sentiment import *
 from chatbot import *
 
 # Load Harry Potter corpus
-corpus_df = pd.read_csv('hp_script.csv', encoding = 'ISO-8859-1')
+corpus_df = pd.read_csv('corpus/hp_script.csv', encoding = 'ISO-8859-1')
 corpus = []
 corpus_text = ''
 sent_tokens = nltk.sent_tokenize('')
@@ -33,10 +33,11 @@ corpus = nltk.sent_tokenize(corpus_text)
 client = authenticate_client()
 
 # --- Preprocessing --- #
-# nltk.download('punkt') required for the first time
-# nltk.download('wordnet') required for the first time
+# Required for the first time
+# nltk.download('punkt') 
+# nltk.download('wordnet')
+# Wordnet is a semantically-oriented dictionary of English included in NLTK
 lemmer = nltk.stem.WordNetLemmatizer()
-# Wordnet is a semantically-oriented dictionary of English included in NLTK 
 # Takes tokens as input and returns normalized tokens
 def LemTokens(tokens):
     return [lemmer.lemmatize(token) for token in tokens]
