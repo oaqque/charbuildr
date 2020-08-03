@@ -17,3 +17,6 @@ If you want to leave this environment to work on another project :
 `deactivate`
 
 For more information on virtual environments see [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/). 
+
+## Usage
+To start the chatbot :  `python3 chatbot_main.py`
