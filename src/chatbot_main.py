@@ -12,6 +12,7 @@ import numpy as np
 import pandas as pd
 import random
 import string # to process standard python strings
+import os
 
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -20,7 +21,9 @@ from sentiment import *
 from chatbot import *
 
 # Load Harry Potter corpus
-corpus_df = pd.read_csv('corpus/hp_script.csv', encoding = 'ISO-8859-1')
+os.chdir('../data')
+data_dir = os.getcwd() + "/hp_script.csv"
+corpus_df = pd.read_csv(data_dir, encoding = 'ISO-8859-1')
 corpus = []
 corpus_text = ''
 sent_tokens = nltk.sent_tokenize('')
