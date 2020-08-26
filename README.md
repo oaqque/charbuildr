@@ -18,5 +18,7 @@ If you want to leave this environment to work on another project :
 
 For more information on virtual environments see [here](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/). 
 
+In order to setup the Azure Endpoint see [here](https://www.notion.so/willye/Azure-Text-Analytics-b2066f9e1623491ab253488820660bd7).
+
 ## Usage
 To start the chatbot :  `python3 chatbot_main.py`
