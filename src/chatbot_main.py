@@ -97,6 +97,7 @@ while (flag == True):
     user_response = user_response.lower()
 
     sim_calc = determine_response(user_response)
+    # Pass the response from the user to the sentiment analysis endpoint
     sentiment = sentiment_analysis(client, [user_response])
     print("User Relationship: " + str(bot.update_user_relationship(sentiment)))
 
