@@ -2,3 +2,5 @@
 src/keys.py
 **.DS_store
 env/
+src/data/
+src/output/
