@@ -2,5 +2,8 @@
 src/keys.py
 **.DS_store
 env/
-src/data/
-src/output/
+src/data/*
+src/output/*
+
+!src/data/.gitkeep
+!src/output/.gitkeep
