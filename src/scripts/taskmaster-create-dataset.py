@@ -5,8 +5,8 @@ import numpy as np
 from tqdm import tqdm 
 
 ##### Define paths to data and output #####
-data_folder = Path("data/json/")
-output_folder = Path("data/csv/")
+data_folder = Path("../data/json/")
+output_folder = Path("../data/csv/")
 
 with open(data_folder / "self-dialogs.json") as file:
     data = json.load(file)

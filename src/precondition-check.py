@@ -6,7 +6,7 @@ import argparse
 
 ##### Define paths to data and output #####
 data_folder = Path("data/csv/")
-output_folder = Path("output/analysis/")
+output_folder = Path("output/analysis-0.1/")
 
 ##### Initialise ArgParse #####
 parser = argparse.ArgumentParser()
@@ -18,7 +18,7 @@ args = parser.parse_args()
 if args.var:
     relationship_variability = args.var
 else:
-    relationship_variability = 0.2
+    relationship_variability = 0.1
 relationship_score = RelationshipScore(relationship_variability)
 
 ##### Get the conversation file #####
