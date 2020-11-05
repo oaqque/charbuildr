@@ -3,7 +3,7 @@ Author: William Zhiwei Ye
 
 This object contains a ChatBot which will keep track of the relationship-score between the User and Conversational AI
 """
-from sentiment import *
+from sentiment import authenticate_client, sentiment_analysis, Sentiment
 
 class RelationshipScore:
 

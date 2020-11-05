@@ -17,10 +17,6 @@ def authenticate_client():
 
 def sentiment_analysis(client, user_response):
     response = client.analyze_sentiment(documents = user_response)[0]
-    print("Sentiment: " + response.sentiment)
-    print("Positive: " + str(response.confidence_scores.positive))
-    print("Neutral: " + str(response.confidence_scores.neutral))
-    print("Negative: " + str(response.confidence_scores.negative))  
     return Sentiment(response.sentiment, response.confidence_scores.positive, response.confidence_scores.neutral, response.confidence_scores.negative)
     
 class Sentiment:
