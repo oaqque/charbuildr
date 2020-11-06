@@ -17,14 +17,17 @@ from generativeModel import GenerativeModel
 from retrievalModel import RetrievalModel
 import os
 
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
-    
 ##########################################################################
 # Main #
+print("Loading generative model...")
 generativeModel = GenerativeModel()
+print("Loading retrieval model...")
 retrievalModel = RetrievalModel()
+print("Establishing relationship score...")
 relationshipScore = RelationshipScore(0.1)
-rs_threshold = generate_rs_threshold()
+rs_threshold = round(generate_rs_threshold(), 3)
+
+print(f"\nRelationship Score Threshold: {rs_threshold}\n")
 
 flag = True
 welcomeMsg = "Hi, how can I help you today?"
