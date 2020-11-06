@@ -7,3 +7,4 @@ src/output/*
 
 !src/data/.gitkeep
 !src/output/.gitkeep
+final-presentation.pdf
