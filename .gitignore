@@ -1,4 +1,4 @@
-*__pycache__
+**__pycache__
 src/keys.py
 **.DS_store
 env/
@@ -8,3 +8,9 @@ src/output/*
 !src/data/.gitkeep
 !src/output/.gitkeep
 final-presentation.pdf
+
+src/trainer/cached
+src/trainer/fantasy
+src/trainer/corpus
+src/trainer/rick-and-morty
+src/trainer/runs

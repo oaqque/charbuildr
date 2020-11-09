@@ -20,4 +20,4 @@ class RelationshipScore:
         return self.user_relationship
 
     def get_relationship(self):
-        return self.user_relationship
+        return round(self.user_relationship, 3)

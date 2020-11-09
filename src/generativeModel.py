@@ -14,10 +14,10 @@ from transformers import (
 import torch
 
 class GenerativeModel():
-    def __init__(self):
+    def __init__(self, model):
         self.step = 0
-        self.tokenizer = AutoTokenizer.from_pretrained('microsoft/DialoGPT-medium')
-        self.model = AutoModelForCausalLM.from_pretrained('microsoft/DialoGPT-medium')
+        self.tokenizer = AutoTokenizer.from_pretrained('trainer/' + model)
+        self.model = AutoModelForCausalLM.from_pretrained('trainer/' + model)
     
     def add_to_history(self, utterance):
         """Tokenises the utterance and appends it to the chat history"""
@@ -28,7 +28,7 @@ class GenerativeModel():
 
     def get_response(self):
         modelResults = self.model.generate(
-            self.chat_history, max_length=200,
+            self.chat_history, max_length=1000,
             pad_token_id=self.tokenizer.eos_token_id,  
             no_repeat_ngram_size=3,       
             do_sample=True, 

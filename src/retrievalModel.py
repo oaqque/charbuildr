@@ -32,12 +32,13 @@ class RetrievalModel():
     def load_corpus(self):
         # Load Harry Potter corpus
         os.chdir('data/csv')
-        data_dir = os.getcwd() + "/hp_script.csv"
+        data_dir = os.getcwd() + "/aknowledgebase.csv"
         corpus_df = pd.read_csv(data_dir, encoding = 'ISO-8859-1')
+        corpus_df = corpus_df.fillna('...')
         corpus = []
         corpus_text = ''
 
-        for line in corpus_df['dialogue']:
+        for line in corpus_df['line']:
             corpus_text += line
         corpus = nltk.sent_tokenize(corpus_text)
         return corpus
