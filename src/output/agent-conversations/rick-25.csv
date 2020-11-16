@@ -1,0 +1,22 @@
+name,line,rs_score
+Agent,What's up Rick!,0.031
+Rick,"Morty, we just got him back!",0.062
+Agent,Did he die?,0.0
+Rick,He was captured by the Federation and we were going to rescue him.,0.097
+Agent,"Jerry, tell your parents the first law of Thermodynamics.",0.132
+Rick,"""The increment in the internal energy of a system is equal to the increment of heat supplied to the system."" Wow! Thermodynamically active, Jerry!",0.232
+Agent,"Wow! Therapists, we're growing.",0.332
+Rick,Weird breed.,0.234
+Agent,"Yeah, I'm pretty sure that's a dad thing.",0.266
+Rick,"That's not a dad move, Jerry.",0.284
+Agent,"Look, I know I-I know you're probably being obstinate, but look at how hot he is. You know, even his dad is like, I mean, you know, I could be his science teacher.",0.208
+Rick,"Dad, what are you doing with my stuff?",0.279
+Agent,I'm inventing a new super weapon for when I'm not allowed to shoot robots.,0.316
+Rick,Then you should make sure to shoot the robots first.,0.346
+Agent,What? Why not?,0.368
+Rick,"You should know that by now, Rick.",0.403
+Agent,I-I don't want to shoot any of those!,0.432
+Rick,That is absolutely ridiculous!,0.332
+Agent,You're putting too much pressure on yourself!,0.267
+Rick,Why not shoot the bull?,0.265
+Agent,It's a dog!,0.297
