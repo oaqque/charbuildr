@@ -16,3 +16,4 @@ src/trainer/corpus
 src/trainer/rick-and-morty
 src/trainer/runs
 src/trainer/
+src/data/liwc/rick_script_clean.csv
