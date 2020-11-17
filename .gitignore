@@ -5,6 +5,7 @@ env/
 src/data/csv/*
 src/data/json/*
 src/output/analysis*
+src/output/agent-conversations/*.csv
 
 !src/data/.gitkeep
 !src/output/.gitkeep

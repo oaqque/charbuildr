@@ -21,4 +21,5 @@ For more information on virtual environments see [here](https://packaging.python
 In order to setup the Azure Endpoint see [here](https://www.notion.so/willye/Azure-Text-Analytics-b2066f9e1623491ab253488820660bd7).
 
 ## Usage
-To start the chatbot :  `python3 chatbot_main.py`
+To start the chatbot :  `python chatbot_main.py --model [MODEL_NAME]`
+[MODEL_NAME] must be supplied as an argument
