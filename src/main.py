@@ -21,9 +21,22 @@ import argparse
 # Arguments #
 parser = argparse.ArgumentParser()
 parser.add_argument('--model')
+parser.add_argument('--printmode')
 args = parser.parse_args()
 
+if args.printmode == 'verbose':
+	print_rels = True
+else:
+	print_rels = False
+
 arg_model = args.model
+##########################################################################
+def print_relationship_score(currScore, threshold):
+    if print_rels:
+        print(f"[Relationship Score: {currScore}, Relationship Score Threshold: {threshold}")
+    else:
+        return
+	
 ##########################################################################
 # Main #
 print("Loading generative model...")
@@ -42,8 +55,7 @@ while (flag == True):
     user_response = input("\nUser: ").lower()
     relationshipScore.update(user_response)
     generativeModel.add_to_history(user_response)
-    print(f"[Relationship Score: {relationshipScore.get_relationship()}, Relationship Score Threshold: {rs_threshold}")
-
+    print_relationship_score(relationshipScore.get_relationship(), rs_threshold)
     # Get a response from the models
     if (relationshipScore.get_relationship() < rs_threshold):
         ai_response = generativeModel.get_response()
@@ -59,7 +71,7 @@ while (flag == True):
             print("\n[Generative Model Response]\n")
     relationshipScore.update(ai_response)
     print("AI: " + ai_response)
-    print(f"[Relationship Score: {relationshipScore.get_relationship()}, Relationship Score Threshold: {rs_threshold}")
+    print_relationship_score(relationshipScore.get_relationship(), rs_threshold)
 
     if (user_response.lower() == "bye"):
         flag = False 
