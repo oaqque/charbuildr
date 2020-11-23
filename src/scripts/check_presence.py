@@ -13,7 +13,7 @@ import numpy as np
 vectorizer = TfidfVectorizer()
 
 # Prepare training corpus tfidf vectors
-corpus_raw = pd.read_csv('./trainer/corpus/rick_script_clean.csv')
+corpus_raw = pd.read_csv('../trainer/corpus/rick_script_clean.csv')
 tfidf_corpus = []
 for row in tqdm(corpus_raw['line']): 
     tfidf = vectorizer.fit_transform([row])
