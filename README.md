@@ -23,3 +23,6 @@ In order to setup the Azure Endpoint see [here](https://www.notion.so/willye/Azu
 ## Usage
 To start the chatbot :  `python chatbot_main.py --model [MODEL_NAME]`
 [MODEL_NAME] must be supplied as an argument
+
+## Undergraduate Thesis
+[View](https://github.com/oaqque/charbuildr/blob/master/Natural%20Language%20Processing%20in%20Role%20Playing%20Games.pdf)
