@@ -1,5 +1,5 @@
 # charbuildr
-charbuildr is a project to build a chatbot that is able to adopt personality traits from a given corpus and generate responses accordingly. I hope this will allow game developers to build interactive characters with less manual story writing. 
+charbuildr is a project to build a chatbot that is able to adopt personality traits from a given corpus and generate responses accordingly.
 
 ## Setup and Installation
 To setup your python environment, dependencies can be found in `requirements.txt` or a virtual environment may be used instead. 
